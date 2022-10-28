@@ -33,7 +33,7 @@ public class MainFrameForm extends javax.swing.JFrame {
         
         initComponents();
         
-        labImage.setIcon(setIcon( "/Users/harshaljaiswal/NetBeansProjects/AedAssignment2/doc.jpg"));
+        labImage.setIcon(setIcon( "/Users/verma/hospital.png"));
         
     }
 
@@ -129,7 +129,7 @@ public class MainFrameForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        if( txtUsername.getText().matches("jaiswal.ha") && txtPassword.getText().matches("test123")){
+        if( txtUsername.getText().matches("yash") && txtPassword.getText().matches("test123")){
             MedSystemFrame patient = new MedSystemFrame();
             patient.setVisible(true);
             

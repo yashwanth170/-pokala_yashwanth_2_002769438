@@ -45,7 +45,7 @@ public class PatientHistory extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(0, 204, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         jButton1.setText("View Details");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

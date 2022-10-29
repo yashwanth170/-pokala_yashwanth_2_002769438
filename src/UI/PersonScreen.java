@@ -65,6 +65,7 @@ public class PersonScreen extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         txtComm = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        varDate = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -148,9 +149,11 @@ public class PersonScreen extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(txtAdd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(varDate, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel5)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(male)))
@@ -186,14 +189,16 @@ public class PersonScreen extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtPersonId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(varDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
                         .addComponent(male)
                         .addComponent(female)))
-                .addGap(47, 47, 47)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,6 +290,11 @@ public class PersonScreen extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Enter proper zip");
             return false;
         }
+        if(!varDate.getText().matches("^(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/((19|2[0-9])[0-9]{2})$")){
+             JOptionPane.showMessageDialog(this, "Enter proper date");
+                return false;
+                        
+             } 
 
         return true;
     }
@@ -297,14 +307,20 @@ public class PersonScreen extends javax.swing.JPanel {
 
             String sss = female.isSelected() ? "female" : "male";
             
-            String sDate1="31/12/1998";
+            String sDate1=varDate.getText();
 
             try {
                 Date date1;
                 date1 = new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);
+                if(ms.searchPerson(Integer.parseInt(txtPersonId.getText()))==0)
+                    JOptionPane.showMessageDialog(this, "Enter unique id");
+                else{
+                    
                 Person p = new Person(txtFullName.getText(), h, sss,date1 ,Integer.valueOf(txtPersonId.getText()));
-            ms.addPerson(p);
+                
+                ms.addPerson(p);
                 JOptionPane.showMessageDialog(this, "Person Registered");
+                }
             } catch (ParseException ex) {
                 Logger.getLogger(PersonScreen.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -340,5 +356,6 @@ public class PersonScreen extends javax.swing.JPanel {
     private javax.swing.JTextField txtPersonId;
     private javax.swing.JTextField txtState;
     private javax.swing.JTextField txtZip;
+    private javax.swing.JTextField varDate;
     // End of variables declaration//GEN-END:variables
 }

@@ -101,7 +101,10 @@ public class MedSystem {
         return patientList.searcPatient(txtId);
     }
 
-
+    public int searchPerson(int txtid)
+      {
+          return personList.searchPerson(txtid);
+      }
    
 
 }

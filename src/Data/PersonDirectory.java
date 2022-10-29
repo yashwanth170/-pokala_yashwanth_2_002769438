@@ -55,4 +55,16 @@ public class PersonDirectory {
             }
         }
     }
+    
+    public int searchPerson(int txtId) {
+
+        for (Person v : persons) {
+            System.out.println("person "+v.getId());
+            if (v.getId() == txtId ) {
+                System.out.println("person"+v.getFullName());
+                return 0;
+            }
+        }
+        return 1;
+    }
 }

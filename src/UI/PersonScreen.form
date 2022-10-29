@@ -75,7 +75,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtPersonId" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
                               <Component id="txtFullName" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
@@ -86,9 +86,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="txtAdd" alignment="0" min="-2" pref="241" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtAdd" min="-2" pref="241" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="varDate" min="-2" pref="96" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="male" min="-2" max="-2" attributes="0"/>
@@ -140,16 +142,19 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtPersonId" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="varDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="male" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="female" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtAdd" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -284,6 +289,8 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Community:"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="varDate">
         </Component>
       </SubComponents>
     </Container>

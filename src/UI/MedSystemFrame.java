@@ -128,7 +128,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
 
         jMenu1.setText("ADMIN");
 
-        jMenuItem2.setText("PersonDetails");
+        jMenuItem2.setText("Add Person");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);

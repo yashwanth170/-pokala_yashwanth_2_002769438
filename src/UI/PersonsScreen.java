@@ -9,6 +9,10 @@ import Model.MedSystem;
 import Model.Patient;
 import Model.Person;
 import Model.VitalSigns;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -59,6 +63,16 @@ public class PersonsScreen extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         diag = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        female = new javax.swing.JRadioButton();
+        male = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        txtDob = new javax.swing.JTextField();
+        varUpdate = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -79,6 +93,11 @@ public class PersonsScreen extends javax.swing.JPanel {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -112,6 +131,31 @@ public class PersonsScreen extends javax.swing.JPanel {
             }
         });
 
+        jLabel8.setText("Gender:");
+
+        female.setText("Female");
+
+        male.setText("Male");
+
+        jLabel12.setText("DOB:");
+
+        varUpdate.setText("Update");
+        varUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                varUpdateActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("ID:");
+
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Name:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -121,12 +165,32 @@ public class PersonsScreen extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jButton1))
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(34, 34, 34)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel6))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtName)
+                                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(female)
+                                            .addComponent(male)))
+                                    .addComponent(jLabel12)
+                                    .addComponent(txtDob, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(varUpdate)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
@@ -149,7 +213,7 @@ public class PersonsScreen extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(191, 191, 191)
                         .addComponent(jLabel1)))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +221,28 @@ public class PersonsScreen extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(male))
+                        .addGap(7, 7, 7)
+                        .addComponent(female)
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(varUpdate)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -249,6 +334,62 @@ public class PersonsScreen extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Record Deleted!");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void varUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varUpdateActionPerformed
+        // TODO add your handling code here:
+        int selectRow=jTable1.getSelectedRow();
+
+        if(selectRow<0)
+        {
+            JOptionPane.showMessageDialog(this,"Please select a valid row");
+            return;
+        }
+        DefaultTableModel model=(DefaultTableModel) jTable1.getModel();
+        Person p=ms.searchUser((int)model.getValueAt(selectRow, 0));
+        Patient pat=ms.searcPatient((int)model.getValueAt(selectRow, 0));
+        if(validateData()){
+            
+            p.setFullName(txtName.getText());
+            pat.setFullName(txtName.getText());
+            String sss = female.isSelected() ? "female" : "male";
+
+            p.setGender(sss);
+            pat.setGender(sss);
+            String dob=txtDob.getText();
+
+            try{
+                Date date1;
+                date1 = new SimpleDateFormat("dd/MM/yyyy").parse(dob);
+                p.setDob(date1);
+                pat.setDob(date1);
+            }
+            catch (ParseException ex) {
+                Logger.getLogger(PersonScreen.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            model.setValueAt(Integer.parseInt(txtId.getText()),jTable1.getSelectedRow(),0);
+            model.setValueAt(txtName.getText(),jTable1.getSelectedRow(),1);
+            model.setValueAt(sss,jTable1.getSelectedRow(),2);
+            Period period = Period.between(p.getDob().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), LocalDate.now());
+            model.setValueAt(period.getYears(),jTable1.getSelectedRow(),5);
+        }
+    }//GEN-LAST:event_varUpdateActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel) jTable1.getModel();
+        int selectRow=jTable1.getSelectedRow();
+        Person p=ms.searchUser((int)model.getValueAt(selectRow, 0));
+        txtId.setText(model.getValueAt(selectRow,0).toString());
+        txtName.setText(model.getValueAt(selectRow,1).toString());
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");  
+        String strDate = dateFormat.format(p.getDob());  
+
+        txtDob.setText(strDate);
+    }//GEN-LAST:event_jTable1MouseClicked
+
     private void DisplayPerson() {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
@@ -268,22 +409,49 @@ public class PersonsScreen extends javax.swing.JPanel {
         }
 
     }
+    
+    public boolean validateData() {
+
+        if (txtName.getText().length() < 2 || !txtName.getText().matches("[a-zA-Z]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper name.");
+            return false;
+        }
+
+        if(!txtDob.getText().matches("^(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/((19|2[0-9])[0-9]{2})$")){
+             JOptionPane.showMessageDialog(this, "Enter proper date");
+                return false;
+                        
+             } 
+        
+        
+        return true;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TxtPulse;
     private javax.swing.JButton btnAddPatient;
     private javax.swing.JTextField diag;
+    private javax.swing.JRadioButton female;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JRadioButton male;
     private javax.swing.JTextField txtBP;
+    private javax.swing.JTextField txtDob;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtTemp;
+    private javax.swing.JButton varUpdate;
     // End of variables declaration//GEN-END:variables
 }

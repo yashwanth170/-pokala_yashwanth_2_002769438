@@ -60,4 +60,16 @@ public class hospitalDirectory {
             }
         }
     }
+    
+    public int searchHospId(int id) {
+        System.out.println("id "+id);
+        
+       for (hospital h : hosp) {
+            
+            if (h.getDoc().getId() == id ) {
+                return 0;
+            }
+        }
+       return 1;
+    }
 }

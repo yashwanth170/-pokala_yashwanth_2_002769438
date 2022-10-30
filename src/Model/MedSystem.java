@@ -105,6 +105,11 @@ public class MedSystem {
       {
           return personList.searchPerson(txtid);
       }
+    
+    public int searchHospId(int txtid)
+      {
+          return hospitalList.searchHospId(txtid);
+      }
    
 
 }

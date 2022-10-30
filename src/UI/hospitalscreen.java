@@ -163,11 +163,18 @@ public class hospitalscreen extends javax.swing.JPanel {
 
     private void varSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varSaveActionPerformed
         // TODO add your handling code here:
+        if(ms.searchHospId(Integer.parseInt(varId.getText()))==1)
+        {
         doctor d=new doctor(Integer.parseInt(varId.getText()),varName.getText(),varSpec.getText());
         Community c=new Community(varComm.getText());
         hospital hos=new hospital(d,varState.getText(),varHospName.getText(),c,varCity.getText());
         ms.addHosp(hos);
         JOptionPane.showMessageDialog(this, "Person Registered");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Enter Unique Id");
+        }
     }//GEN-LAST:event_varSaveActionPerformed
 
 

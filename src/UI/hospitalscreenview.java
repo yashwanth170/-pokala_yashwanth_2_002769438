@@ -208,21 +208,31 @@ public class hospitalscreenview extends javax.swing.JPanel {
         }
         DefaultTableModel model=(DefaultTableModel) jTable4.getModel();
         int id=Integer.parseInt(varId1.getText());
-        ms.deleteHospital(id);
-        model.removeRow(selectRow);
+        hospital h=ms.searchHospital(id);
         
-        doctor d=new doctor(Integer.parseInt(varId1.getText()),varDoc1.getText(),varSpec1.getText());
+        
+        
+        
+        
+        
+        h.setCity(varCity1.getText());
+        doctor d=h.getDoc();
+        d.setId(Integer.parseInt(varId1.getText()));
+        d.setName(varDoc1.getText());
+        d.setSpecialization(varSpec1.getText());
+        h.setHosp_name(varHosp1.getText());
+        h.setState(varState1.getText());
         Community c=new Community(varComm1.getText());
-        hospital hos=new hospital(d,varState1.getText(),varHosp1.getText(),c,varCity1.getText());
-        ms.addHosp(hos);
+        h.setCommunity(c);
         
         model.setValueAt(varId1.getText(),jTable4.getSelectedRow(),0);
         model.setValueAt(varDoc1.getText(),jTable4.getSelectedRow(),1);
         model.setValueAt(varSpec1.getText(),jTable4.getSelectedRow(),2);
         model.setValueAt(varHosp1.getText(),jTable4.getSelectedRow(),3);
         model.setValueAt(varState1.getText(),jTable4.getSelectedRow(),4);
-        model.setValueAt(varComm1.getText(),jTable4.getSelectedRow(),5);
-        model.setValueAt(varCity1.getText(),jTable4.getSelectedRow(),6);
+        model.setValueAt(varCity1.getText(),jTable4.getSelectedRow(),5);
+        model.setValueAt(varComm1.getText(),jTable4.getSelectedRow(),6);
+        
         JOptionPane.showMessageDialog(this, "Hospital Updated");
     }//GEN-LAST:event_jButton1ActionPerformed
 

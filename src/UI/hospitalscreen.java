@@ -199,20 +199,20 @@ public boolean validateData() {
         }
 
         if (txtHosp.getText().length() < 2 || !txtHosp.getText().matches("[a-zA-Z_ ]+")) {
-            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            JOptionPane.showMessageDialog(this, "Enter proper Hospital.");
             return false;
         }
         if (txtName.getText().length() < 2 || !txtName.getText().matches("[a-zA-Z_ ]+")) {
-            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            JOptionPane.showMessageDialog(this, "Enter proper Name.");
             return false;
         }
          if (txtSpec.getText().length() < 2 || !txtSpec.getText().matches("[a-zA-Z_ ]+")) {
-            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            JOptionPane.showMessageDialog(this, "Enter proper Specialization.");
             return false;
         }
         
         if (!txtId.getText().matches("[0-9]+")) {
-            JOptionPane.showMessageDialog(this, "Enter proper zip");
+            JOptionPane.showMessageDialog(this, "Enter proper ID");
             return false;
         }
         

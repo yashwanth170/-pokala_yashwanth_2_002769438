@@ -213,11 +213,11 @@ public class hospitalscreenview extends javax.swing.JPanel {
         
         
         
-        
+        if(validateData()){
         
         h.setCity(varCity1.getText());
         doctor d=h.getDoc();
-        d.setId(Integer.parseInt(varId1.getText()));
+        
         d.setName(varDoc1.getText());
         d.setSpecialization(varSpec1.getText());
         h.setHosp_name(varHosp1.getText());
@@ -234,6 +234,7 @@ public class hospitalscreenview extends javax.swing.JPanel {
         model.setValueAt(varComm1.getText(),jTable4.getSelectedRow(),6);
         
         JOptionPane.showMessageDialog(this, "Hospital Updated");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void varDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varDeleteActionPerformed
@@ -286,6 +287,45 @@ public class hospitalscreenview extends javax.swing.JPanel {
             model.addRow(row);
             
         }
+    }
+    
+    public boolean validateData() {
+
+        
+
+        if (varState1.getText().length() < 2 || !varState1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper state.");
+            return false;
+        }
+
+        if (varCity1.getText().length() < 2 || !varCity1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper City name.");
+            return false;
+        }
+
+        
+        if (varComm1.getText().length() < 2 || !varComm1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+
+        if (varSpec1.getText().length() < 2 || !varSpec1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper Specialization.");
+            return false;
+        }
+        if (varHosp1.getText().length() < 2 || !varHosp1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper Hospital Name.");
+            return false;
+        }
+         if (varDoc1.getText().length() < 2 || !varDoc1.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper Doctor Name.");
+            return false;
+        }
+        
+        
+        
+
+        return true;
     }
 
 

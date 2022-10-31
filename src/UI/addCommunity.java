@@ -224,6 +224,8 @@ public class addCommunity extends javax.swing.JPanel {
         model.setValueAt(txtPin.getText(),jTable3.getSelectedRow(),4);
         model.setValueAt(txtCity.getText(),jTable3.getSelectedRow(),5);
         model.setValueAt(txtComm.getText(),jTable3.getSelectedRow(),6);
+        
+        JOptionPane.showMessageDialog(this, "Updated Successfuly");
         }
     }//GEN-LAST:event_varUpdate1ActionPerformed
 

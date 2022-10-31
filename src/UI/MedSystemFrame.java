@@ -96,7 +96,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,7 +136,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
-        jMenuItem3.setText("Add Patient");
+        jMenuItem3.setText("Add/Update/Delete Patient");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -184,7 +184,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
 
         jMenu3.setText("Community Admin");
 
-        jMenuItem5.setText("Add Community");
+        jMenuItem5.setText("View/Update Community");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -201,7 +201,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem6.setText("ADD Doctor");
+        jMenuItem6.setText("Add Doctor");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
@@ -209,7 +209,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem6);
 
-        jMenuItem7.setText("VIEW Doctor");
+        jMenuItem7.setText("View/Update Doctor");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem7ActionPerformed(evt);

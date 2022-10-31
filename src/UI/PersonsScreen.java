@@ -349,27 +349,31 @@ public class PersonsScreen extends javax.swing.JPanel {
         if(validateData()){
             
             p.setFullName(txtName.getText());
-            pat.setFullName(txtName.getText());
+            if(pat!=null)
+                pat.setFullName(p.getFullName());
             String sss = female.isSelected() ? "female" : "male";
 
             p.setGender(sss);
-            pat.setGender(sss);
+            if(pat!=null)
+                pat.setGender(sss);
             String dob=txtDob.getText();
-
+            
             try{
                 Date date1;
                 date1 = new SimpleDateFormat("dd/MM/yyyy").parse(dob);
                 p.setDob(date1);
-                pat.setDob(date1);
+                if(pat!=null)
+                    pat.setDob(date1);
             }
             catch (ParseException ex) {
                 Logger.getLogger(PersonScreen.class.getName()).log(Level.SEVERE, null, ex);
             }
-            model.setValueAt(Integer.parseInt(txtId.getText()),jTable1.getSelectedRow(),0);
+           
             model.setValueAt(txtName.getText(),jTable1.getSelectedRow(),1);
             model.setValueAt(sss,jTable1.getSelectedRow(),2);
             Period period = Period.between(p.getDob().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), LocalDate.now());
             model.setValueAt(period.getYears(),jTable1.getSelectedRow(),5);
+            JOptionPane.showMessageDialog(this, " Updated ");
         }
     }//GEN-LAST:event_varUpdateActionPerformed
 

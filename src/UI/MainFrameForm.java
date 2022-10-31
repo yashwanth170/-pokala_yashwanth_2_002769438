@@ -33,7 +33,7 @@ public class MainFrameForm extends javax.swing.JFrame {
         
         initComponents();
         
-        labImage.setIcon(setIcon( "/Users/verma/doc.jpg"));
+        labImage.setIcon(setIcon( "doc.jpg"));
         
     }
 

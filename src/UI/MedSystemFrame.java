@@ -156,7 +156,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
 
         jMenu2.setText("Doctor");
 
-        jMenuItem10.setText("Add Patient");
+        jMenuItem10.setText("Add/Update Patient");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -164,7 +164,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem10);
 
-        jMenuItem11.setText("Update Patient");
+        jMenuItem11.setText("Update Existing Patient");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem11ActionPerformed(evt);

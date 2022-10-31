@@ -366,7 +366,7 @@ public class PersonsScreen extends javax.swing.JPanel {
                     pat.setDob(date1);
             }
             catch (ParseException ex) {
-                Logger.getLogger(PersonScreen.class.getName()).log(Level.SEVERE, null, ex);
+                
             }
            
             model.setValueAt(txtName.getText(),jTable1.getSelectedRow(),1);

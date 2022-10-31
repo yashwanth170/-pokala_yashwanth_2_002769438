@@ -416,7 +416,7 @@ public class PersonsScreen extends javax.swing.JPanel {
     
     public boolean validateData() {
 
-        if (txtName.getText().length() < 2 || !txtName.getText().matches("[a-zA-Z]+")) {
+        if (txtName.getText().length() < 2 || !txtName.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper name.");
             return false;
         }

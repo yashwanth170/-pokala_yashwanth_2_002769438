@@ -32,12 +32,12 @@ public class hospitalscreen extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        varId = new javax.swing.JTextField();
-        varName = new javax.swing.JTextField();
-        varSpec = new javax.swing.JTextField();
-        varState = new javax.swing.JTextField();
-        varComm = new javax.swing.JTextField();
-        varCity = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        txtSpec = new javax.swing.JTextField();
+        txtState = new javax.swing.JTextField();
+        txtComm = new javax.swing.JTextField();
+        txtCity = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -45,12 +45,12 @@ public class hospitalscreen extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         varSave = new javax.swing.JButton();
-        varHospName = new javax.swing.JTextField();
+        txtHosp = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
-        varState.addActionListener(new java.awt.event.ActionListener() {
+        txtState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                varStateActionPerformed(evt);
+                txtStateActionPerformed(evt);
             }
         });
 
@@ -108,16 +108,15 @@ public class hospitalscreen extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(jLabel7)
                         .addGap(38, 38, 38)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(varSave)
-                    .addComponent(varName)
-                    .addComponent(varId)
-                    .addComponent(varSpec)
-                    .addComponent(varState)
-                    .addComponent(varComm)
-                    .addComponent(varCity)
-                    .addComponent(varHospName, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                    .addComponent(txtName)
+                    .addComponent(txtId)
+                    .addComponent(txtSpec)
+                    .addComponent(txtState)
+                    .addComponent(txtComm)
+                    .addComponent(txtCity)
+                    .addComponent(txtHosp, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
                 .addContainerGap(210, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -125,31 +124,31 @@ public class hospitalscreen extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varSpec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSpec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varHospName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHosp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(varComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(varCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addComponent(varSave)
@@ -157,17 +156,18 @@ public class hospitalscreen extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void varStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varStateActionPerformed
+    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_varStateActionPerformed
+    }//GEN-LAST:event_txtStateActionPerformed
 
     private void varSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varSaveActionPerformed
         // TODO add your handling code here:
-        if(ms.searchHospId(Integer.parseInt(varId.getText()))==1)
+        if(validateData()){
+        if(ms.searchHospId(Integer.parseInt(txtId.getText()))==1)
         {
-        doctor d=new doctor(Integer.parseInt(varId.getText()),varName.getText(),varSpec.getText());
-        Community c=new Community(varComm.getText());
-        hospital hos=new hospital(d,varState.getText(),varHospName.getText(),c,varCity.getText());
+        doctor d=new doctor(Integer.parseInt(txtId.getText()),txtName.getText(),txtSpec.getText());
+        Community c=new Community(txtComm.getText());
+        hospital hos=new hospital(d,txtState.getText(),txtHosp.getText(),c,txtCity.getText());
         ms.addHosp(hos);
         JOptionPane.showMessageDialog(this, "Person Registered");
         }
@@ -175,9 +175,50 @@ public class hospitalscreen extends javax.swing.JPanel {
         {
             JOptionPane.showMessageDialog(this, "Enter Unique Id");
         }
+        }
     }//GEN-LAST:event_varSaveActionPerformed
 
+public boolean validateData() {
 
+        
+
+        if (txtState.getText().length() < 2 || !txtState.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper state.");
+            return false;
+        }
+
+        if (txtCity.getText().length() < 2 || !txtCity.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper City name.");
+            return false;
+        }
+
+        
+        if (txtComm.getText().length() < 2 || !txtComm.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+
+        if (txtHosp.getText().length() < 2 || !txtHosp.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+        if (txtName.getText().length() < 2 || !txtName.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+         if (txtSpec.getText().length() < 2 || !txtSpec.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+        
+        if (!txtId.getText().matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper zip");
+            return false;
+        }
+        
+
+        return true;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -186,13 +227,13 @@ public class hospitalscreen extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField varCity;
-    private javax.swing.JTextField varComm;
-    private javax.swing.JTextField varHospName;
-    private javax.swing.JTextField varId;
-    private javax.swing.JTextField varName;
+    private javax.swing.JTextField txtCity;
+    private javax.swing.JTextField txtComm;
+    private javax.swing.JTextField txtHosp;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtSpec;
+    private javax.swing.JTextField txtState;
     private javax.swing.JButton varSave;
-    private javax.swing.JTextField varSpec;
-    private javax.swing.JTextField varState;
     // End of variables declaration//GEN-END:variables
 }

@@ -252,27 +252,27 @@ public class PersonScreen extends javax.swing.JPanel {
 
     public boolean validateData() {
 
-        if (txtFullName.getText().length() < 2 || !txtFullName.getText().matches("[a-zA-Z]+")) {
+        if (txtFullName.getText().length() < 2 || !txtFullName.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper name.");
             return false;
         }
 
-        if (txtState.getText().length() < 2 || !txtState.getText().matches("[a-zA-Z]+")) {
+        if (txtState.getText().length() < 2 || !txtState.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper state.");
             return false;
         }
 
-        if (txtCity.getText().length() < 2 || !txtCity.getText().matches("[a-zA-Z]+")) {
+        if (txtCity.getText().length() < 2 || !txtCity.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper City name.");
             return false;
         }
 
-        if (txtAdd.getText().length() < 2 || !txtAdd.getText().matches("[a-zA-Z]+")) {
+        if (txtAdd.getText().length() < 2 || !txtAdd.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper Address.");
             return false;
         }
 
-        if (txtComm.getText().length() < 2 || !txtComm.getText().matches("[a-zA-Z]+")) {
+        if (txtComm.getText().length() < 2 || !txtComm.getText().matches("[a-zA-Z_ ]+")) {
             JOptionPane.showMessageDialog(this, "Enter proper community.");
             return false;
         }

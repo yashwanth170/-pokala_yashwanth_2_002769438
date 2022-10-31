@@ -205,6 +205,7 @@ public class addCommunity extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model=(DefaultTableModel) jTable3.getModel();
+        if(validateData()){
         Person p=ms.searchUser(Integer.parseInt(txtId.getText()));
         Patient pat=ms.searcPatient(Integer.parseInt(txtId.getText()));
         House h=p.getResidence();
@@ -223,9 +224,43 @@ public class addCommunity extends javax.swing.JPanel {
         model.setValueAt(txtPin.getText(),jTable3.getSelectedRow(),4);
         model.setValueAt(txtCity.getText(),jTable3.getSelectedRow(),5);
         model.setValueAt(txtComm.getText(),jTable3.getSelectedRow(),6);
+        }
     }//GEN-LAST:event_varUpdate1ActionPerformed
 
+public boolean validateData() {
 
+        
+
+        if (txtState.getText().length() < 2 || !txtState.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper state.");
+            return false;
+        }
+
+        if (txtCity.getText().length() < 2 || !txtCity.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper City name.");
+            return false;
+        }
+
+        
+        if (txtComm.getText().length() < 2 || !txtComm.getText().matches("[a-zA-Z_ ]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper community.");
+            return false;
+        }
+
+        
+
+        
+        if (!txtPin.getText().matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper zip");
+            return false;
+        }
+        if (!txtApt.getText().matches("[0-9]+")) {
+            JOptionPane.showMessageDialog(this, "Enter proper Apt Number");
+            return false;
+        }
+
+        return true;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

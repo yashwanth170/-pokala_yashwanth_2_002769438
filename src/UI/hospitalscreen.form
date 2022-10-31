@@ -47,13 +47,13 @@
               </Group>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="varSave" min="-2" max="-2" attributes="0"/>
-                  <Component id="varName" max="32767" attributes="0"/>
-                  <Component id="varId" alignment="0" max="32767" attributes="0"/>
-                  <Component id="varSpec" alignment="0" max="32767" attributes="0"/>
-                  <Component id="varState" max="32767" attributes="0"/>
-                  <Component id="varComm" max="32767" attributes="0"/>
-                  <Component id="varCity" max="32767" attributes="0"/>
-                  <Component id="varHospName" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="txtName" max="32767" attributes="0"/>
+                  <Component id="txtId" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtSpec" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtState" max="32767" attributes="0"/>
+                  <Component id="txtComm" max="32767" attributes="0"/>
+                  <Component id="txtCity" max="32767" attributes="0"/>
+                  <Component id="txtHosp" alignment="0" pref="118" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="210" max="32767" attributes="0"/>
           </Group>
@@ -64,37 +64,37 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varSpec" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSpec" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varState" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtState" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varHospName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtHosp" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="varComm" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtComm" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="varCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -105,20 +105,20 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="varId">
+    <Component class="javax.swing.JTextField" name="txtId">
     </Component>
-    <Component class="javax.swing.JTextField" name="varName">
+    <Component class="javax.swing.JTextField" name="txtName">
     </Component>
-    <Component class="javax.swing.JTextField" name="varSpec">
+    <Component class="javax.swing.JTextField" name="txtSpec">
     </Component>
-    <Component class="javax.swing.JTextField" name="varState">
+    <Component class="javax.swing.JTextField" name="txtState">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="varStateActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStateActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="varComm">
+    <Component class="javax.swing.JTextField" name="txtComm">
     </Component>
-    <Component class="javax.swing.JTextField" name="varCity">
+    <Component class="javax.swing.JTextField" name="txtCity">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -179,7 +179,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="varSaveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="varHospName">
+    <Component class="javax.swing.JTextField" name="txtHosp">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>

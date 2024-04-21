@@ -18,7 +18,7 @@ Additionally, the following features were implemented:
 
 ## Class Diagram
 
-![Class Diagram](class_diagram.jpg)
+![](class%20diagram.jpg)
 
 This class diagram illustrates the structural components of the application, depicting the relationships and interactions between various classes and entities. It serves as a visual representation of the application's design and architecture.
 

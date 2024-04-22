@@ -11,7 +11,7 @@ This application serves as a platform for individuals to locate medical resource
 
 Additionally, the following features were implemented:
 
-- Extensive use of Object-Oriented Design (OOD) principles for a robust codebase.
+- Extensive use of Object-Oriented Design (OOD) principles.
 - User data management (CRUD operations) to maintain and update user information.
 - UI & UX considerations were integrated to enhance the user experience.
 - Data validation mechanisms were implemented to ensure data integrity and reliability.

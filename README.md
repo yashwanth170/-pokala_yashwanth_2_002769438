@@ -22,8 +22,3 @@ Additionally, the following features were implemented:
 
 This class diagram illustrates the structural components of the application, depicting the relationships and interactions between various classes and entities. It serves as a visual representation of the application's design and architecture.
 
-## Sequence Diagram
-
-[Insert Sequence Diagram Here]
-
-The sequence diagram provides a detailed view of the flow of interactions between different components and modules within the application. It outlines the sequence of actions and communications that occur during the execution of various tasks or processes.
